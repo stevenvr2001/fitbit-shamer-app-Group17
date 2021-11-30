@@ -1,45 +1,72 @@
 #background {
   width: 100%;
   height: 100%;
-  fill: blue;
+  fill: grey;
 }
 
 #steps {
-  fill: pink;
+  fill: white;
   x: 50%;
-  y: 50;
-  font-size: 35;
+  y: 70;
+  font-size: 25;
   font-family: System-Regular;
   text-anchor: middle;
   text-length: 12;
 }
 
 #calories {
-  fill: yellow;
+  fill: white;
   x: 50%;
-  y: 70;
-  font-size: 35;
+  y: 90;
+  font-size: 25;
   font-family: System-Regular;
   text-anchor: middle;
   text-length: 12;
 }
 
 #hr {
-  fill: #ff0000;
+  fill: white;
   x: 50%;
-  y: 30;
-  font-size: 35;
+  y: 50;
+  font-size: 25;
   font-family: System-Regular;
   text-anchor: middle;
   text-length: 12;
 }
 
 #letter {
-  fill: #ff0000;
+  fill: blue;
   x: 50%;
   y: 90%;
-  font-size: 36;
+  font-size: 45;
   font-family: System-Regular;
   text-anchor: middle;
   text-length: 12;
+}
+
+#time {
+  fill: white;
+  x: 50%;
+  y: 55%;
+  font-size: 90;
+  font-weight: bold;
+  font-family: System-Regular;
+  text-anchor: middle;
+  text-length: 6;
+}
+
+#stepsicon {
+  x: 30;
+  y: 30;
+  width: 24;
+  height: 24;
+  fill: white;
+}
+
+#hricon {
+  x: 50;
+  y: 50;
+  width: 24;
+  height: 24;
+  fill: white;
 }

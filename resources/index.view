@@ -1,8 +1,14 @@
 <svg viewport-fill="#000000">
   <rect id="background" />
-  <text id="time" fill="green" x="50%" y="50%" font-size="72" font-family="System-Regular" text-anchor="middle" text-length="6"/>
   <text id="letter"/>
-  <text id="hr"/>
-  <text id="steps"/>
-  <text id="calories"/>
+
+  <svg id="group">
+    <text id="hr"/>
+    <text id="steps"/>
+    <text id="calories"/>
+  </svg>
+
+  <text id="time" pointer-events="visible"/>
+  <image id="hricon" href="icons/hr.png"/>
+  <image id="stepsicon" href="icons/steps.png"/>
 </svg>
