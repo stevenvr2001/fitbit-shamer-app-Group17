@@ -1,14 +1,39 @@
 <svg viewport-fill="#000000">
   <rect id="background" />
+  
+  <text id="myMonth" />
+  <text id="myDay" />
+  <text id="myWeekday" />
+  
   <text id="letter"/>
 
-  <svg id="group">
-    <text id="hr"/>
-    <text id="steps"/>
-    <text id="calories"/>
+  <svg id="">
+    <text id="date"/>
   </svg>
 
   <text id="time" pointer-events="visible"/>
-  <image id="hricon" href="icons/hr.png"/>
-  <image id="stepsicon" href="icons/steps.png"/>
+
+  <svg id="text-info">
+
+    <svg id="">
+    <image id="hricon" href="icons/hr.png"/>
+    <text id="hr"/>
+    </svg>
+
+    <svg id="">
+    <text id="steps"/>
+    <image id="stepsicon" href="icons/steps.png"/>
+    </svg>
+
+    <svg id="">
+    <text id="calories"/>
+    <image id="calicon" href="icons/calories.png"/>
+    </svg>
+
+    <svg id="">
+    <text id="battery"/>
+    </svg>
+
+  </svg>
+
 </svg>
