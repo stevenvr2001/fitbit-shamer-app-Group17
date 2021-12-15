@@ -32,7 +32,7 @@
 
     <svg id="">
     <text id="battery"/>
-    
+    <image id="bicon" href="icons/battery.png"/>
     </svg>
 
     <svg id="">

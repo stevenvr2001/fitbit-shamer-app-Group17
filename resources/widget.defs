@@ -5,7 +5,7 @@
     
     <symbol id="frames" href="#sprite-image">
       <animate id="anim" attributeName="value" begin="enable"
-          from="1" to="100" dur="indefinite" repeatCount="5" />
+          from="1" to="100" dur="3s" repeatCount="indefinite" />
       <image id="sequence-image" width="276" x="50%-138" y="25%" />
     </symbol>
   </defs>

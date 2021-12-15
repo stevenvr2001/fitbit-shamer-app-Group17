@@ -133,11 +133,3 @@
   width: 276;
   height: 150;
 }
-
-#batteryFill {
-  transform: scaleX(30%);
-  fill: white;
-}
-#batteryOutline {
-  fill: white;
-}
