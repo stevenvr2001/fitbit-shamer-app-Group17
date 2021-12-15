@@ -16,13 +16,13 @@
   <svg id="text-info">
 
     <svg id="heart">
-    <image id="hricon" href="icons/hr.png"/>
-    <text id="hr"/>
+      <image id="hricon" href="icons/hr.png"/>
+      <text id="hr"/>
     </svg>
 
     <svg id="step">
-    <text id="steps"/>
-    <image id="stepsicon" href="icons/steps.png"/>
+      <text id="steps"/>
+      <image id="stepsicon" href="icons/steps.png"/>
     </svg>
 
     <svg id="cal">
@@ -40,7 +40,7 @@
     </svg>
    
     <svg>
-    <use id="myAnimation" href="#frames" />
+    <use id="myAnimation" href="#frames" pointer-events="all" />
     </svg>
   
    <svg id="circ">

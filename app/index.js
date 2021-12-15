@@ -24,7 +24,7 @@ const $sequenceImage = document.getElementById('sequence-image');
 const $myAnimation = document.getElementById('myAnimation');
 const $anim = document.getElementById('anim');
 const $circ = document.getElementById('circ');
-const $info = document.getElementById('text-info');
+/*const $info = document.getElementById('text-info');*/
 /*const $cone = document.getElementById('cone');
 const $ctwo = document.getElementById('ctwo');*/
 
@@ -67,9 +67,9 @@ function draw() {
   $myDay.text = day;
 
   $time.addEventListener('click', function () {
-    $info.style.display = 'none';
-    $myMonth.style.display = 'none';
-    $myDay.style.display = 'none';
+    //$info.style.display = 'none';
+    //$myMonth.style.display = 'none';
+    //$myDay.style.display = 'none';
     $circ.style.display = 'inline';
     $time.y = 70;
     $time.style.fontSize = 50;
@@ -121,6 +121,7 @@ function draw() {
   }
   //sprite wegdoen//
   $myAnimation.addEventListener('click', function () {
+    /*console.log('click clikc')*/
     $myAnimation.animate('disable');
     $myAnimation.style.display = 'none';
   });
