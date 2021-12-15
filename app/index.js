@@ -16,13 +16,17 @@ const $time = document.getElementById('time');
 const $hr = document.getElementById('hr');
 const $steps = document.getElementById('steps');
 const $calories = document.getElementById('calories');
-const $group = document.getElementById('group');
+/*const $group = document.getElementById('group');*/
 const $battery = document.getElementById('battery');
 const $myMonth = document.getElementById('myMonth');
 const $myDay = document.getElementById('myDay');
 const $sequenceImage = document.getElementById('sequence-image');
-const myAnimation = document.getElementById('myAnimation');
-const anim = document.getElementById('anim');
+const $myAnimation = document.getElementById('myAnimation');
+const $anim = document.getElementById('anim');
+const $circ = document.getElementById('circ');
+const $info = document.getElementById('text-info');
+/*const $cone = document.getElementById('cone');
+const $ctwo = document.getElementById('ctwo');*/
 
 // define vars for later use;
 let time = '';
@@ -30,10 +34,15 @@ let hr = '--';
 let now = new Date();
 let monthnum = now.getMonth();
 let day = now.getDate();
+let batteryLevel;
 
-$time.onclick = () => {
-  $group.style.display = 'none';
-};
+/*$time.addEventListener("click", function () {
+	$circ.style.display = "none";
+});
+
+$time.addEventListener("click", function () {
+	$circ.classList.remove("onzichtbaar");
+});*/
 
 // get heart rate
 if (HeartRateSensor) {
@@ -51,12 +60,70 @@ function draw() {
   $hr.text = hr;
   $steps.text = today.adjusted.steps;
   $calories.text = today.adjusted.calories;
-
-  let batteryP = Math.floor(battery.chargeLevel) + '%';
+  batteryLevel = battery.chargeLevel;
+  let batteryP = Math.floor(batteryLevel) + '%';
   $battery.text = batteryP;
   $myMonth.text = monthname;
   $myDay.text = day;
 
+  $time.addEventListener('click', function () {
+    $info.style.display = 'none';
+    $myMonth.style.display = 'none';
+    $myDay.style.display = 'none';
+    $circ.style.display = 'inline';
+    $time.y = 70;
+    $time.style.fontSize = 50;
+  });
+
+  /*$time.onclick = () => {
+    $circ.style.display = 'none';
+  };*/
+
+  if (hr > 90 && hr < 110) {
+    $sequenceImage.href = `Heartbeat100/Frame_01.png`;
+
+    //aantal frames anpassen//
+    $anim.to = 22;
+
+    //animatie activeren//
+    $myAnimation.animate('enable');
+
+    //info verzetten//
+    $time.y = 65;
+    $myMonth.y = 65;
+    $myDay.y = 65;
+    $time.x = 85;
+    $myMonth.x = 265 - 45;
+    $myDay.x = 265;
+    $time.style.fontSize = 30;
+    $myAnimation.style.display = 'inline';
+  }
+
+  if (batteryLevel > 49 && batteryLevel < 51) {
+    $sequenceImage.href = `Battery50/Frame_01.png`;
+
+    //aantal frames anpassen//
+    $anim.to = 54;
+
+    //animatie activeren//
+    $myAnimation.animate('enable');
+
+    //time verzetten//
+    $time.y = 65;
+    $myMonth.y = 65;
+    $myDay.y = 65;
+    $time.x = 85;
+    $myMonth.x = 265 - 45;
+    $myDay.x = 265;
+    $time.style.fontSize = 30;
+
+    $myAnimation.style.display = 'inline';
+  }
+  //sprite wegdoen//
+  $myAnimation.addEventListener('click', function () {
+    $myAnimation.animate('disable');
+    $myAnimation.style.display = 'none';
+  });
   //trigger sprites
   /* function enable() {
     myAnimation.animate("enable");
@@ -65,11 +132,6 @@ function draw() {
   function disable() {
     myAnimation.style.display = "none";
   }*/
-  if (hr > 90 && hr < 110) {
-    $sequenceImage.href = `Heartbeat100/Frame_01.png`;
-    anim.to = 22;
-    myAnimation.animate('enable');
-  }
 }
 
 /*datum */

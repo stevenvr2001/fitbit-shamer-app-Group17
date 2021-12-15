@@ -15,22 +15,22 @@
 
   <svg id="text-info">
 
-    <svg id="">
+    <svg id="heart">
     <image id="hricon" href="icons/hr.png"/>
     <text id="hr"/>
     </svg>
 
-    <svg id="">
+    <svg id="step">
     <text id="steps"/>
     <image id="stepsicon" href="icons/steps.png"/>
     </svg>
 
-    <svg id="">
+    <svg id="cal">
     <text id="calories"/>
     <image id="calicon" href="icons/calories.png"/>
     </svg>
 
-    <svg id="">
+    <svg id="bat">
     <text id="battery"/>
     <image id="bicon" href="icons/battery.png"/>
     </svg>
@@ -42,7 +42,41 @@
     <svg>
     <use id="myAnimation" href="#frames" />
     </svg>
+  
+   <svg id="circ">
+    <svg id="cone" height="100" width="100">
+    <circle cx="110" cy="120" r="20" fill="#F8CDC1" />
+    </svg>
+    <svg id="ctwo" height="100" width="100">
+    <circle cx="170" cy="120" r="20"  fill="#F7CBF7" />
+    </svg>
+    <svg height="100" width="100">
+    <circle cx="230" cy="120" r="20" fill="#C3D9FC" />
+    </svg>
 
+    <svg height="100" width="100">
+    <circle cx="110" cy="180" r="20" fill="#F4B7B6" />
+    </svg>
+    <svg height="100" width="100">
+    <circle cx="170" cy="180" r="20"  fill="#D8D4FC" />
+    </svg>
+    <svg height="100" width="100">
+    <circle cx="230" cy="180" r="20" fill="#CBFDFA" />
+    </svg>
+
+    <svg height="50" width="50">
+    <circle cx="110" cy="240" r="20" fill="#FEF9D0" />
+    </svg>
+    <svg height="50" width="50">
+    <circle cx="170" cy="240" r="20" fill="#DAFCCE" />
+    </svg>
+    <svg height="50" width="50">
+    <circle cx="230" cy="240" r="20" fill="#F1F1F1" />
+    </svg>
+
+    <svg height="50" width="50">
+    <circle cx="170" cy="280" r="20" fill="grey" />
+    </svg>
   </svg>
-
+  </svg>
 </svg>
