@@ -6,7 +6,7 @@
 
 #myMonth {
   fill: white;
-  x: 60%;
+  x: 45%;
   y: 20%;
   font-size: 30;
   font-weight: bold;
@@ -28,7 +28,7 @@
 
 #myDay {
   fill: white;
-  x: 70%;
+  x: 60%;
   y: 20%;
   font-size: 30;
   font-weight: bold;
@@ -120,4 +120,24 @@
   y: 70%;
   width: 24;
   height: 24;
+}
+
+#bicon {
+  x: 80%-15;
+  y: 70%;
+  width: 24;
+  height: 24;
+}
+
+#sequence-image {
+  width: 276;
+  height: 150;
+}
+
+#batteryFill {
+  transform: scaleX(30%);
+  fill: white;
+}
+#batteryOutline {
+  fill: white;
 }

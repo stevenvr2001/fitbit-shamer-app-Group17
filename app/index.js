@@ -20,11 +20,13 @@ const $group = document.getElementById('group');
 const $battery = document.getElementById('battery');
 const $myMonth = document.getElementById('myMonth');
 const $myDay = document.getElementById('myDay');
+const $sequenceImage = document.getElementById('sequence-image');
+const myAnimation = document.getElementById('myAnimation');
+const anim = document.getElementById('anim');
 
 // define vars for later use;
 let time = '';
 let hr = '--';
-let batteryP = Math.floor(battery.chargeLevel) + '%';
 let now = new Date();
 let monthnum = now.getMonth();
 let day = now.getDate();
@@ -49,10 +51,25 @@ function draw() {
   $hr.text = hr;
   $steps.text = today.adjusted.steps;
   $calories.text = today.adjusted.calories;
+
+  let batteryP = Math.floor(battery.chargeLevel) + '%';
   $battery.text = batteryP;
   $myMonth.text = monthname;
   $myDay.text = day;
-  //
+
+  //trigger sprites
+  /* function enable() {
+    myAnimation.animate("enable");
+  }
+  
+  function disable() {
+    myAnimation.style.display = "none";
+  }*/
+  if (hr > 90 && hr < 110) {
+    $sequenceImage.href = `Heartbeat100/Frame_01.png`;
+    anim.to = 22;
+    myAnimation.animate('enable');
+  }
 }
 
 /*datum */

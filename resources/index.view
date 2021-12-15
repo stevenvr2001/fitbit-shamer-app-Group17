@@ -32,6 +32,15 @@
 
     <svg id="">
     <text id="battery"/>
+    
+    </svg>
+
+    <svg id="">
+    
+    </svg>
+   
+    <svg>
+    <use id="myAnimation" href="#frames" />
     </svg>
 
   </svg>

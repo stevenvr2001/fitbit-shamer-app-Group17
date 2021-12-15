@@ -2,5 +2,11 @@
   <defs>
     <link rel="stylesheet" href="styles.css" />
     <link rel="import" href="/mnt/sysassets/system_widget.defs" />
+    
+    <symbol id="frames" href="#sprite-image">
+      <animate id="anim" attributeName="value" begin="enable"
+          from="1" to="100" dur="indefinite" repeatCount="5" />
+      <image id="sequence-image" width="276" x="50%-138" y="25%" />
+    </symbol>
   </defs>
 </svg>
