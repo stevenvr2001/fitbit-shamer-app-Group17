@@ -4,8 +4,8 @@
     <link rel="import" href="/mnt/sysassets/system_widget.defs" />
     
     <symbol id="frames" href="#sprite-image">
-      <animate id="anim" attributeName="value" begin="enable"
-          from="1" to="100" dur="3s" repeatCount="indefinite" />
+      <animate attributeType="XML" id="anim" attributeName="value" begin="enable"
+          from="1" to="100" dur="3s" repeatCount="3" />
       <image id="sequence-image" width="276" x="50%-138" y="25%" />
     </symbol>
   </defs>

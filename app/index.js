@@ -141,7 +141,7 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    console.log(color);
+    //console.log(color);
     //classfix
     $time.className = 'time';
   });
@@ -411,6 +411,18 @@ function draw() {
     $time.className = 'time';
   });
 
+  function closeMeme() {
+    $myAnimation.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    $myMonth.y = 65;
+    $myDay.y = 65;
+    $time.x = 336 / 2;
+    $myMonth.x = 336 / 2 - 22.5;
+    $myDay.x = 336 / 2 + 22.5;
+    $time.style.fontSize = 90;
+  }
+
   if (hr > 90 && hr < 110) {
     $sequenceImage.href = `Heartbeat100/Frame_01.png`;
 
@@ -429,6 +441,9 @@ function draw() {
     $myDay.x = 265;
     $time.style.fontSize = 30;
     $myAnimation.style.display = 'inline';
+
+    //close sprite
+    setInterval(closeMeme, 5000);
   }
 
   if (batteryLevel > 49 && batteryLevel < 51) {
@@ -450,20 +465,18 @@ function draw() {
     $time.style.fontSize = 30;
 
     $myAnimation.style.display = 'inline';
+
+    //close sprite
+    setInterval(closeMeme, 5000);
   }
-  //sprite wegdoen//
-  $myAnimation.addEventListener('click', function () {
-    /*console.log('click clikc')*/
-    $myAnimation.animate('disable');
-    $myAnimation.style.display = 'none';
-  });
-  //trigger sprites
-  /* function enable() {
-    myAnimation.animate("enable");
-  }
-  
-  function disable() {
-    myAnimation.style.display = "none";
+
+  //console.log($myAnimation.style.display);
+
+  /*if ($myAnimation.style.display = 'inline') {
+    setInterval(closeMeme, 5000);
+    function closeMeme() {
+      $myAnimation.style.display = 'none'
+    }
   }*/
 }
 
