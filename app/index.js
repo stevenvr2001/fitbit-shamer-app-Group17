@@ -70,388 +70,388 @@ function draw() {
   $myDay.text = day;
 
   $time.addEventListener('click', function () {
-    if ($time.className === 'time') {
-      $myMonth.style.display = 'none';
-      $myDay.style.display = 'none';
-      $hrIcon.style.display = 'none';
-      $stepsIcon.style.display = 'none';
-      $caloriesIcon.style.display = 'none';
-      $batteryIcon.style.display = 'none';
-      $hr.style.display = 'none';
-      $steps.style.display = 'none';
-      $calories.style.display = 'none';
-      $battery.style.display = 'none';
-      $circ.style.display = 'inline';
-      $time.y = 70;
-      $time.style.fontSize = 50;
-      $time.className = 'menu';
-      //console.log($time.className);
-    }
+    //if ($time.className = 'time') {
+    $myMonth.style.display = 'none';
+    $myDay.style.display = 'none';
+    $hrIcon.style.display = 'none';
+    $stepsIcon.style.display = 'none';
+    $caloriesIcon.style.display = 'none';
+    $batteryIcon.style.display = 'none';
+    $hr.style.display = 'none';
+    $steps.style.display = 'none';
+    $calories.style.display = 'none';
+    $battery.style.display = 'none';
+    $circ.style.display = 'inline';
+    $time.y = 70;
+    $time.style.fontSize = 50;
+    $time.className = 'menu';
+    //console.log($time.className);
+    //}
   });
 
   $closeMenu.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('close menu');
-    }
+    //if ($time.className = 'menu') {
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('close menu');
+    //}
   });
 
   //GET THEM COLORS GOING//
 
   $orangeTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#F8CDC1';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('orange Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#F8CDC1';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('orange Theme');
+    //}
   });
 
   $pinkTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#F7CBF7';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      //console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('pink Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#F7CBF7';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    //console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('pink Theme');
+    //}
   });
 
   $blueTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#C3D9FC';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      //console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('Blue Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#C3D9FC';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    //console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('Blue Theme');
+    //}
   });
 
   $redTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#F4B7B6';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      //console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('red Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#F4B7B6';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    //console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('red Theme');
+    //}
   });
 
   $purpleTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#D8D4FC';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      //console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('purple Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#D8D4FC';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    //console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('purple Theme');
+    //}
   });
 
   $oceanTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#CBFDFA';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      //console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('ocean Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#CBFDFA';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    //console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('ocean Theme');
+    //}
   });
 
   $yellowTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#FEF9D0';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      //console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('yellow Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#FEF9D0';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    //console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('yellow Theme');
+    //}
   });
 
   $greenTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#DAFCCE';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      //console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('green Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#DAFCCE';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    //console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('green Theme');
+    //}
   });
 
   $sandTheme.addEventListener('click', function () {
-    if ($time.className === 'menu') {
-      //reorganise
-      $myMonth.style.display = 'inline';
-      $myDay.style.display = 'inline';
-      $hrIcon.style.display = 'inline';
-      $stepsIcon.style.display = 'inline';
-      $caloriesIcon.style.display = 'inline';
-      $batteryIcon.style.display = 'inline';
-      $hr.style.display = 'inline';
-      $steps.style.display = 'inline';
-      $calories.style.display = 'inline';
-      $battery.style.display = 'inline';
-      $circ.style.display = 'none';
-      $time.y = 70 + 120;
-      $time.style.fontSize = 90;
-      //define color
-      color = '#F1F1F1';
-      //change colors
-      $myMonth.style.fill = color;
-      $myDay.style.fill = color;
-      $hrIcon.style.fill = color;
-      $stepsIcon.style.fill = color;
-      $caloriesIcon.style.fill = color;
-      $batteryIcon.style.fill = color;
-      $hr.style.fill = color;
-      $steps.style.fill = color;
-      $calories.style.fill = color;
-      $battery.style.fill = color;
-      $time.style.fill = color;
-      //console.log(color);
-      //classfix
-      $time.className = 'time';
-      //console.log($time.className);
-      //console.log('sand Theme');
-    }
+    //if ($time.className = 'menu') {
+    //reorganise
+    $myMonth.style.display = 'inline';
+    $myDay.style.display = 'inline';
+    $hrIcon.style.display = 'inline';
+    $stepsIcon.style.display = 'inline';
+    $caloriesIcon.style.display = 'inline';
+    $batteryIcon.style.display = 'inline';
+    $hr.style.display = 'inline';
+    $steps.style.display = 'inline';
+    $calories.style.display = 'inline';
+    $battery.style.display = 'inline';
+    $circ.style.display = 'none';
+    $time.y = 70 + 120;
+    $time.style.fontSize = 90;
+    //define color
+    color = '#F1F1F1';
+    //change colors
+    $myMonth.style.fill = color;
+    $myDay.style.fill = color;
+    $hrIcon.style.fill = color;
+    $stepsIcon.style.fill = color;
+    $caloriesIcon.style.fill = color;
+    $batteryIcon.style.fill = color;
+    $hr.style.fill = color;
+    $steps.style.fill = color;
+    $calories.style.fill = color;
+    $battery.style.fill = color;
+    $time.style.fill = color;
+    //console.log(color);
+    //classfix
+    $time.className = 'time';
+    //console.log($time.className);
+    //console.log('sand Theme');
+    //}
   });
 
   if (hr > 90 && hr < 110) {
