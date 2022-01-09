@@ -113,7 +113,6 @@ function draw() {
   //GET THEM COLORS GOING//
 
   $orangeTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -145,13 +144,9 @@ function draw() {
     console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('orange Theme');
-    //}
   });
 
   $pinkTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -180,16 +175,11 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    //console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('pink Theme');
-    //}
   });
 
   $blueTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -218,16 +208,11 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    //console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('Blue Theme');
-    //}
   });
 
   $redTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -256,16 +241,11 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    //console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('red Theme');
-    //}
   });
 
   $purpleTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -294,16 +274,11 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    //console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('purple Theme');
-    //}
   });
 
   $oceanTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -332,16 +307,11 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    //console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('ocean Theme');
-    //}
   });
 
   $yellowTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -370,16 +340,11 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    //console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('yellow Theme');
-    //}
   });
 
   $greenTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -408,16 +373,12 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    //console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('green Theme');
     //}
   });
 
   $sandTheme.addEventListener('click', function () {
-    //if ($time.className = 'menu') {
     //reorganise
     $myMonth.style.display = 'inline';
     $myDay.style.display = 'inline';
@@ -446,12 +407,8 @@ function draw() {
     $calories.style.fill = color;
     $battery.style.fill = color;
     $time.style.fill = color;
-    //console.log(color);
     //classfix
     $time.className = 'time';
-    //console.log($time.className);
-    //console.log('sand Theme');
-    //}
   });
 
   if (hr > 90 && hr < 110) {
