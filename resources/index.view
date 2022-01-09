@@ -11,7 +11,8 @@
     <text id="date"/>
   </svg>
 
-  <text id="time" pointer-events="visible"/>
+
+  <text class="time" id="time" pointer-events="visible"/>
 
   <svg id="text-info">
 
@@ -44,39 +45,39 @@
     </svg>
   
    <svg id="circ">
-    <svg id="cone" height="100" width="100">
-    <circle cx="110" cy="120" r="20" fill="#F8CDC1" />
+    <svg height="100" width="100">
+    <circle id="orangeTheme" cx="110" cy="120" r="20" fill="#F8CDC1" pointer-events="visible"/>
     </svg>
-    <svg id="ctwo" height="100" width="100">
-    <circle cx="170" cy="120" r="20"  fill="#F7CBF7" />
+    <svg  height="100" width="100">
+    <circle id="pinkTheme" cx="170" cy="120" r="20"  fill="#F7CBF7" pointer-events="visible"/>
     </svg>
     <svg height="100" width="100">
-    <circle cx="230" cy="120" r="20" fill="#C3D9FC" />
+    <circle id="blueTheme"cx="230" cy="120" r="20" fill="#C3D9FC" pointer-events="visible"/>
+    </svg>
+    <svg height="100" width="100">
+    <circle id="redTheme" cx="110" cy="180" r="20" fill="#F4B7B6" pointer-events="visible"/>
+    </svg>
+    <svg height="100" width="100">
+    <circle id="purpleTheme" cx="170" cy="180" r="20"  fill="#D8D4FC" pointer-events="visible"/>
+    </svg>
+    <svg height="100" width="100">
+    <circle id="oceanTheme" cx="230" cy="180" r="20" fill="#CBFDFA" pointer-events="visible"/>
+    </svg>
+    <svg height="50" width="50">
+    <circle id="yellowTheme" cx="110" cy="240" r="20" fill="#FEF9D0" pointer-events="visible"/>
+    </svg>
+    <svg height="50" width="50">
+    <circle id="greenTheme" cx="170" cy="240" r="20" fill="#DAFCCE" pointer-events="visible"/>
+    </svg>
+    <svg height="50" width="50">
+    <circle id="sandTheme" cx="230" cy="240" r="20" fill="#F1F1F1" pointer-events="visible"/>
     </svg>
 
-    <svg height="100" width="100">
-    <circle cx="110" cy="180" r="20" fill="#F4B7B6" />
-    </svg>
-    <svg height="100" width="100">
-    <circle cx="170" cy="180" r="20"  fill="#D8D4FC" />
-    </svg>
-    <svg height="100" width="100">
-    <circle cx="230" cy="180" r="20" fill="#CBFDFA" />
-    </svg>
 
-    <svg height="50" width="50">
-    <circle cx="110" cy="240" r="20" fill="#FEF9D0" />
-    </svg>
-    <svg height="50" width="50">
-    <circle cx="170" cy="240" r="20" fill="#DAFCCE" />
-    </svg>
-    <svg height="50" width="50">
-    <circle cx="230" cy="240" r="20" fill="#F1F1F1" />
-    </svg>
-
-    <svg height="50" width="50">
-    <circle cx="170" cy="280" r="20" fill="grey" />
+    <svg>
+    <image id="closeMenu" href="icons/close-icon.png" pointer-events="visible"/>
     </svg>
   </svg>
   </svg>
 </svg>
+
