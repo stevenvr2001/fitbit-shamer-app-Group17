@@ -1,4 +1,5 @@
 import { battery } from 'power';
+//import { charger } from "power";
 import document from 'document';
 import clock from 'clock';
 import { preferences } from 'user-settings';
@@ -20,7 +21,7 @@ const $battery = document.getElementById('battery');
 const $hrIcon = document.getElementById('hricon');
 const $stepsIcon = document.getElementById('stepsicon');
 const $caloriesIcon = document.getElementById('calicon');
-const $batteryIcon = document.getElementById('bicon');
+//const $batteryIcon = document.getElementById('bicon');
 const $myMonth = document.getElementById('myMonth');
 const $myDay = document.getElementById('myDay');
 const $sequenceImage = document.getElementById('sequence-image');
@@ -37,6 +38,8 @@ const $oceanTheme = document.getElementById('oceanTheme');
 const $yellowTheme = document.getElementById('yellowTheme');
 const $greenTheme = document.getElementById('greenTheme');
 const $sandTheme = document.getElementById('sandTheme');
+const batLabel = document.getElementById('batLabel');
+const $batBar = document.getElementById('batBar');
 
 // define vars for later use;
 let time = '';
@@ -55,6 +58,50 @@ if (HeartRateSensor) {
   });
   hrm.start();
 }
+
+//Battery
+const batSize = document.getElementById('batBar');
+//const batPic = document.getElementById("batIcon");
+const batCharging = document.getElementById('chargingIcon');
+
+battery.onchange = () => {
+  if (battery.chargeLevel > 90) {
+    batSize.width = 24;
+  } else if (battery.chargeLevel > 78) {
+    batSize.width = 22;
+  } else if (battery.chargeLevel > 65) {
+    batSize.width = 19;
+  } else if (battery.chargeLevel > 53) {
+    batSize.width = 16;
+  } else if (battery.chargeLevel > 40) {
+    batSize.width = 13;
+  } else if (battery.chargeLevel > 28) {
+    batSize.width = 10;
+  } else if (battery.chargeLevel > 15) {
+    batSize.width = 7;
+  } else if (battery.chargeLevel > 8) {
+    batSize.width = 4;
+    batSize.style.fill = 'white';
+    //batPic.href="img/bat_icon_e.png";
+    batLabel.style.fill = 'white';
+    //batCharging.href="img/charging_icon_w.png";
+  } else if (battery.chargeLevel > 0) {
+    batSize.width = 2;
+    batSize.style.fill = 'firebrick';
+    //batPic.href="img/bat_icon_e_r.png";
+    batLabel.style.fill = 'firebrick';
+    //batCharging.href="img/charging_icon_red.png";
+  } else {
+    batSize.width = 0;
+  }
+};
+
+if (battery.charging ? true : false) {
+  batCharging.style.display = 'inline';
+} else {
+  batCharging.style.display = 'none';
+}
+//console.log("The battery " + (battery.charging ? "is" : "is not") + " charging");
 
 // draw
 function draw() {
@@ -76,7 +123,7 @@ function draw() {
     $hrIcon.style.display = 'none';
     $stepsIcon.style.display = 'none';
     $caloriesIcon.style.display = 'none';
-    $batteryIcon.style.display = 'none';
+    $batBar.style.display = 'none';
     $hr.style.display = 'none';
     $steps.style.display = 'none';
     $calories.style.display = 'none';
@@ -96,7 +143,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -119,7 +166,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -135,7 +182,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;
@@ -153,7 +200,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -169,7 +216,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;
@@ -186,7 +233,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -202,7 +249,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;
@@ -219,7 +266,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -235,7 +282,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;
@@ -252,7 +299,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -268,7 +315,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;
@@ -285,7 +332,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -301,7 +348,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;
@@ -318,7 +365,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -334,7 +381,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;
@@ -351,7 +398,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -367,7 +414,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;
@@ -385,7 +432,7 @@ function draw() {
     $hrIcon.style.display = 'inline';
     $stepsIcon.style.display = 'inline';
     $caloriesIcon.style.display = 'inline';
-    $batteryIcon.style.display = 'inline';
+    $batBar.style.display = 'inline';
     $hr.style.display = 'inline';
     $steps.style.display = 'inline';
     $calories.style.display = 'inline';
@@ -401,7 +448,7 @@ function draw() {
     $hrIcon.style.fill = color;
     $stepsIcon.style.fill = color;
     $caloriesIcon.style.fill = color;
-    $batteryIcon.style.fill = color;
+    $batBar.style.fill = color;
     $hr.style.fill = color;
     $steps.style.fill = color;
     $calories.style.fill = color;

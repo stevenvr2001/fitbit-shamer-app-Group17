@@ -1,10 +1,10 @@
 <svg viewport-fill="#000000">
   <rect id="background" />
-  
+
   <text id="myMonth" />
   <text id="myDay" />
   <text id="myWeekday" />
-  
+
   <text id="letter"/>
 
   <svg id="">
@@ -31,19 +31,32 @@
     <image id="calicon" href="icons/calories.png"/>
     </svg>
 
-    <svg id="bat">
+    <!-- Battery -->
+  <section>
+    <image id="batIcon" x="12%" y="43" width="30" height="15" href="img/bat_icon_e.png">
+    </image>
+    <rect id="batBar" x="253" y="260" width="1" height="9" fill="white" pointer-events="visible">
+    </rect>
+  </section>
+
+  <image id="chargingIcon" opacity="0.7" x="12%" y="46" width="30" height="9" href="img/charging_icon_w.png">
+    </image>
+
+  <text id="batLabel" />
+
+    /*<svg id="bat">
     <text id="battery"/>
     <image id="bicon" href="icons/battery.png"/>
-    </svg>
+    </svg>*/
 
     <svg id="">
-    
+
     </svg>
-   
+
     <svg>
     <use id="myAnimation" href="#frames" pointer-events="all" />
     </svg>
-  
+
    <svg id="circ">
     <svg height="100" width="100">
     <circle id="orangeTheme" cx="110" cy="120" r="20" fill="#F8CDC1" pointer-events="visible"/>
@@ -80,4 +93,3 @@
   </svg>
   </svg>
 </svg>
-

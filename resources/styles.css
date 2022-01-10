@@ -129,6 +129,7 @@
 }
 
 #bicon {
+  visibility: hidden;
   x: 80%-15;
   y: 75%;
   width: 24;
