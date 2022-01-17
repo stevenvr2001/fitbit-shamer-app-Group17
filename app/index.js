@@ -70,6 +70,18 @@ if (HeartRateSensor) {
 
       //close sprite
       setTimeout(closeMeme, 5000);
+    } else if (hr > 139 && hr < 145) {
+      //sequence definieren
+      $sequenceImage.href = `Heartbeat140/Frame_01.png`;
+
+      //aantal frames anpassen//
+      $anim.to = 13;
+
+      //animatie activeren//
+      setTimeout(startMeme, 1000);
+
+      //close sprite
+      setTimeout(closeMeme, 5000);
     }
   });
   hrm.start();
@@ -504,12 +516,24 @@ function draw() {
 //battery memes
 battery.onchange = () => {
   //meme 1
-
-  if (batteryLevel > 49 && batteryLevel < 50) {
+  if (batteryLevel > 49 && batteryLevel < 51) {
     $sequenceImage.href = `Battery50/Frame_01.png`;
 
     //aantal frames anpassen//
     $anim.to = 27;
+
+    //animatie activeren//
+    setTimeout(startMeme, 1000);
+
+    //close sprite
+    setTimeout(closeMeme, 5000);
+
+    console.log('battery memeeeeeeee');
+  } else if (batteryLevel > 9 && batteryLevel < 11) {
+    $sequenceImage.href = `Battery10/Frame_01.png`;
+
+    //aantal frames anpassen//
+    $anim.to = 31;
 
     //animatie activeren//
     setTimeout(startMeme, 1000);
