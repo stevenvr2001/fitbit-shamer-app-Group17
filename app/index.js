@@ -66,7 +66,7 @@ if (HeartRateSensor) {
       $anim.to = 22;
 
       //animatie activeren//
-      setTimeout(startMeme, 2000);
+      setTimeout(startMeme, 1000);
 
       //close sprite
       setTimeout(closeMeme, 5000);
@@ -505,14 +505,14 @@ function draw() {
 battery.onchange = () => {
   //meme 1
 
-  if (batteryLevel > 49 && batteryLevel < 51) {
+  if (batteryLevel > 49 && batteryLevel < 50) {
     $sequenceImage.href = `Battery50/Frame_01.png`;
 
     //aantal frames anpassen//
-    $anim.to = 54;
+    $anim.to = 27;
 
     //animatie activeren//
-    setTimeout(startMeme, 2000);
+    setTimeout(startMeme, 1000);
 
     //close sprite
     setTimeout(closeMeme, 5000);
