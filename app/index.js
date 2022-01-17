@@ -1,5 +1,5 @@
 import { battery } from 'power';
-//import { charger } from "power";
+import { charger } from 'power';
 import document from 'document';
 import clock from 'clock';
 import { preferences } from 'user-settings';
@@ -121,6 +121,34 @@ battery.onchange = () => {
     //batCharging.href="img/charging_icon_red.png";
   } else {
     batSize.width = 0;
+  }
+  //meme 1
+  if (batteryLevel > 49 && batteryLevel < 51) {
+    $sequenceImage.href = `Battery50/Frame_01.png`;
+
+    //aantal frames anpassen//
+    $anim.to = 27;
+
+    //animatie activeren//
+    setTimeout(startMeme, 1000);
+
+    //close sprite
+    setTimeout(closeMeme, 5000);
+
+    console.log('battery memeeeeeeee');
+  } else if (batteryLevel > 9 && batteryLevel < 11) {
+    $sequenceImage.href = `Battery10/Frame_01.png`;
+
+    //aantal frames anpassen//
+    $anim.to = 31;
+
+    //animatie activeren//
+    setTimeout(startMeme, 1000);
+
+    //close sprite
+    setTimeout(closeMeme, 5000);
+
+    console.log('battery memeeeeeeee');
   }
 };
 
@@ -512,38 +540,6 @@ function draw() {
     $time.className = 'time';
   });
 }
-
-//battery memes
-battery.onchange = () => {
-  //meme 1
-  if (batteryLevel > 49 && batteryLevel < 51) {
-    $sequenceImage.href = `Battery50/Frame_01.png`;
-
-    //aantal frames anpassen//
-    $anim.to = 27;
-
-    //animatie activeren//
-    setTimeout(startMeme, 1000);
-
-    //close sprite
-    setTimeout(closeMeme, 5000);
-
-    console.log('battery memeeeeeeee');
-  } else if (batteryLevel > 9 && batteryLevel < 11) {
-    $sequenceImage.href = `Battery10/Frame_01.png`;
-
-    //aantal frames anpassen//
-    $anim.to = 31;
-
-    //animatie activeren//
-    setTimeout(startMeme, 1000);
-
-    //close sprite
-    setTimeout(closeMeme, 5000);
-
-    console.log('battery memeeeeeeee');
-  }
-};
 
 /*datum */
 var month = new Array();
