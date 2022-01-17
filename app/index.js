@@ -55,6 +55,22 @@ if (HeartRateSensor) {
   const hrm = new HeartRateSensor({ frequency: 1 });
   hrm.addEventListener('reading', () => {
     hr = hrm.heartRate;
+
+    //heart rate memes here
+
+    if (hr > 90 && hr < 110) {
+      //sequence definieren
+      $sequenceImage.href = `Heartbeat100/Frame_01.png`;
+
+      //aantal frames anpassen//
+      $anim.to = 22;
+
+      //animatie activeren//
+      setTimeout(startMeme, 2000);
+
+      //close sprite
+      setTimeout(closeMeme, 5000);
+    }
   });
   hrm.start();
 }
@@ -102,6 +118,33 @@ if (battery.charging ? true : false) {
   batCharging.style.display = 'none';
 }
 //console.log("The battery " + (battery.charging ? "is" : "is not") + " charging");
+
+function closeMeme() {
+  $myAnimation.style.display = 'none';
+  $time.y = 70 + 120;
+  $time.style.fontSize = 90;
+  $myMonth.y = 65;
+  $myDay.y = 65;
+  $time.x = 336 / 2;
+  $myMonth.x = 336 / 2 - 22.5;
+  $myDay.x = 336 / 2 + 22.5;
+  $time.style.fontSize = 90;
+}
+
+function startMeme() {
+  //animatie activeren//
+  $myAnimation.animate('enable');
+
+  //info verzetten//
+  $time.y = 65;
+  $myMonth.y = 65;
+  $myDay.y = 65;
+  $time.x = 85;
+  $myMonth.x = 265 - 45;
+  $myDay.x = 265;
+  $time.style.fontSize = 30;
+  $myAnimation.style.display = 'inline';
+}
 
 // draw
 function draw() {
@@ -422,7 +465,6 @@ function draw() {
     $time.style.fill = color;
     //classfix
     $time.className = 'time';
-    //}
   });
 
   $sandTheme.addEventListener('click', function () {
@@ -457,41 +499,11 @@ function draw() {
     //classfix
     $time.className = 'time';
   });
+}
 
-  function closeMeme() {
-    $myAnimation.style.display = 'none';
-    $time.y = 70 + 120;
-    $time.style.fontSize = 90;
-    $myMonth.y = 65;
-    $myDay.y = 65;
-    $time.x = 336 / 2;
-    $myMonth.x = 336 / 2 - 22.5;
-    $myDay.x = 336 / 2 + 22.5;
-    $time.style.fontSize = 90;
-  }
-
-  if (hr > 90 && hr < 110) {
-    $sequenceImage.href = `Heartbeat100/Frame_01.png`;
-
-    //aantal frames anpassen//
-    $anim.to = 22;
-
-    //animatie activeren//
-    $myAnimation.animate('enable');
-
-    //info verzetten//
-    $time.y = 65;
-    $myMonth.y = 65;
-    $myDay.y = 65;
-    $time.x = 85;
-    $myMonth.x = 265 - 45;
-    $myDay.x = 265;
-    $time.style.fontSize = 30;
-    $myAnimation.style.display = 'inline';
-
-    //close sprite
-    setInterval(closeMeme, 5000);
-  }
+//battery memes
+battery.onchange = () => {
+  //meme 1
 
   if (batteryLevel > 49 && batteryLevel < 51) {
     $sequenceImage.href = `Battery50/Frame_01.png`;
@@ -500,32 +512,14 @@ function draw() {
     $anim.to = 54;
 
     //animatie activeren//
-    $myAnimation.animate('enable');
-
-    //time verzetten//
-    $time.y = 65;
-    $myMonth.y = 65;
-    $myDay.y = 65;
-    $time.x = 85;
-    $myMonth.x = 265 - 45;
-    $myDay.x = 265;
-    $time.style.fontSize = 30;
-
-    $myAnimation.style.display = 'inline';
+    setTimeout(startMeme, 2000);
 
     //close sprite
-    setInterval(closeMeme, 5000);
+    setTimeout(closeMeme, 5000);
+
+    console.log('battery memeeeeeeee');
   }
-
-  //console.log($myAnimation.style.display);
-
-  /*if ($myAnimation.style.display = 'inline') {
-    setInterval(closeMeme, 5000);
-    function closeMeme() {
-      $myAnimation.style.display = 'none'
-    }
-  }*/
-}
+};
 
 /*datum */
 var month = new Array();
