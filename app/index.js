@@ -1,5 +1,4 @@
 import { battery } from 'power';
-import { charger } from 'power';
 import document from 'document';
 import clock from 'clock';
 import { preferences } from 'user-settings';
@@ -21,7 +20,6 @@ const $battery = document.getElementById('battery');
 const $hrIcon = document.getElementById('hricon');
 const $stepsIcon = document.getElementById('stepsicon');
 const $caloriesIcon = document.getElementById('calicon');
-//const $batteryIcon = document.getElementById('bicon');
 const $myMonth = document.getElementById('myMonth');
 const $myDay = document.getElementById('myDay');
 const $sequenceImage = document.getElementById('sequence-image');
@@ -40,6 +38,8 @@ const $greenTheme = document.getElementById('greenTheme');
 const $sandTheme = document.getElementById('sandTheme');
 const batLabel = document.getElementById('batLabel');
 const $batBar = document.getElementById('batBar');
+let stepsCount = '';
+let calorieCount = '';
 
 // define vars for later use;
 let time = '';
@@ -89,7 +89,6 @@ if (HeartRateSensor) {
 
 //Battery
 const batSize = document.getElementById('batBar');
-//const batPic = document.getElementById("batIcon");
 const batCharging = document.getElementById('chargingIcon');
 
 battery.onchange = () => {
@@ -110,15 +109,11 @@ battery.onchange = () => {
   } else if (battery.chargeLevel > 8) {
     batSize.width = 4;
     batSize.style.fill = 'white';
-    //batPic.href="img/bat_icon_e.png";
     batLabel.style.fill = 'white';
-    //batCharging.href="img/charging_icon_w.png";
   } else if (battery.chargeLevel > 0) {
     batSize.width = 2;
     batSize.style.fill = 'firebrick';
-    //batPic.href="img/bat_icon_e_r.png";
     batLabel.style.fill = 'firebrick';
-    //batCharging.href="img/charging_icon_red.png";
   } else {
     batSize.width = 0;
   }
@@ -135,7 +130,7 @@ battery.onchange = () => {
     //close sprite
     setTimeout(closeMeme, 5000);
 
-    console.log('battery memeeeeeeee');
+    //console.log('battery memeeeeeeee');
   } else if (batteryLevel > 9 && batteryLevel < 11) {
     $sequenceImage.href = `Battery10/Frame_01.png`;
 
@@ -148,7 +143,7 @@ battery.onchange = () => {
     //close sprite
     setTimeout(closeMeme, 5000);
 
-    console.log('battery memeeeeeeee');
+    //console.log('battery memeeeeeeee');
   }
 };
 
@@ -198,6 +193,36 @@ function draw() {
   $battery.text = batteryP;
   $myMonth.text = monthname;
   $myDay.text = day;
+  stepsCount = today.adjusted.steps;
+  calorieCount = today.adjusted.calories;
+
+  if (calorieCount > 999 && calorieCount < 1001) {
+    //sequence definieren
+    $sequenceImage.href = `Kcal1000/Frame_01.png`;
+
+    //aantal frames anpassen//
+    $anim.to = 27;
+
+    //animatie activeren//
+    setTimeout(startMeme, 1000);
+
+    //close sprite
+    setTimeout(closeMeme, 5000);
+  }
+
+  if (stepsCount > 9999 && stepsCount < 10001) {
+    //sequence definieren
+    $sequenceImage.href = `10000Steps/Frame_01.png`;
+
+    //aantal frames anpassen//
+    $anim.to = 26;
+
+    //animatie activeren//
+    setTimeout(startMeme, 1000);
+
+    //close sprite
+    setTimeout(closeMeme, 5000);
+  }
 
   $time.addEventListener('click', function () {
     //if ($time.className = 'time') {
